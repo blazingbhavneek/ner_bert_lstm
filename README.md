@@ -1,4 +1,4 @@
-# Text Classification using Bi-directional LSTM
+# NER using Bi-directional LSTM
 
 This is a python code for text classification using a bi-directional LSTM (Long Short-Term Memory) neural network with glove pre-trained word embeddings.
 
