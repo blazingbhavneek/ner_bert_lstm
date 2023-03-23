@@ -4,6 +4,8 @@ This is a python code for text classification using a bi-directional LSTM (Long 
 
 ## Dataset
 
+The CoNLL-2003 dataset contains annotated data for three types of named entities: person names, organization names, and locations. The dataset is split into training, validation, and test sets.
+
 The model is trained and evaluated on the corpus given by prof. Tanmoy Chakraborty. This dataset has two text files, train.txt and test.txt, with sentences labeled as "I-NP" or "O" where "I-NP" indicates the beginning of a noun phrase and "O" indicates no named entity.
 
 ## Libraries and Dependencies
@@ -34,3 +36,7 @@ The code uses the following python libraries and dependencies:
     Extract the Assignment_2.zip file to the root directory of the cloned repository.
     Open the Jupyter Notebook file text_classification_bi_lstm.ipynb using Jupyter Notebook or Google Colab.
     Run each cell of the notebook to execute the code.
+ 
+## Author
+
+This notebook was written by Bhavneek Singh.
