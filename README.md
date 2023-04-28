@@ -1,6 +1,9 @@
-# NER using Bi-directional LSTM
+# NER using Bi-directional LSTM and Fine-tuning BERT
 
-This is a python code for text classification using a bi-directional LSTM (Long Short-Term Memory) neural network with glove pre-trained word embeddings.
+This repository contains notebooks for Named Entity Recognition (NER) using 
+- A bi-directional LSTM neural network with glove pre-trained word embeddings in Tensorflow
+- Fine-tuned BERT in PyTorch (using Huggingface)
+
 
 ## Dataset
 
@@ -16,10 +19,13 @@ The code uses the following python libraries and dependencies:
     Numpy
     Pandas
     Zipfile
+    
+    Pytorch
+    Matplotlib
 
 ## Code Description
 
-### The python code includes the following steps:
+### The Bi-LSTM notebook includes the following steps:
 
 - Data Extraction: The data is extracted from the zip file Assignment_2.zip and saved to /tmp directory.
 - Text Processing: The text data is preprocessed by splitting the words and extracting labels for each sentence.
@@ -30,12 +36,14 @@ The code uses the following python libraries and dependencies:
 - Model Training: The model is trained on the prepared data with 10 epochs.
 - Model Evaluation: The trained model is evaluated on the test data with accuracy as the evaluation metric.
 
-## Usage
-
-    Clone the repository on your local machine.
-    Extract the Assignment_2.zip file to the root directory of the cloned repository.
-    Open the Jupyter Notebook file text_classification_bi_lstm.ipynb using Jupyter Notebook or Google Colab.
-    Run each cell of the notebook to execute the code.
+### The BERT notebook includes the following steps:
+- Load the dataset: The dataset used in this code is available in the /kaggle/input/ner-data/ner.csv file. The dataset contains two columns, text and labels.
+- Tokenize the dataset: The BertTokenizerFast class is used to tokenize the dataset. The my_tokenizer function is used to tokenize the text column of the dataset.
+- Encode the labels: The unique_labels dictionary is used to encode the labels.
+- Split the dataset: The dataset is split into four parts, df_hold, df_train, df_val, and df_test.
+- Tokenize the columns: The tokenize_column function is used to preprocess the columns of the dataset and return input ids, attention masks, and token type ids as 2D arrays.
+- Categorical encoding: The cat_labels function is used to perform categorical encoding on the labels.
+- Model training: The BertForTokenClassification class is used to train the model overnight for 2 epochs
  
 ## Author
 
